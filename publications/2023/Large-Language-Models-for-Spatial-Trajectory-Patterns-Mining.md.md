@@ -10,7 +10,7 @@ Zheng Zhang, Hossein Amiri, Zhenke Liu, Andreas Züfle, Liang Zhao
 ### Bibtex
 ```bibtex
 @ARTICLE{zhang2023amiri,
-       author = {{Zhang}, Zheng and {Amiri}, Hossein and {Liu}, Zhenke and {Z{\"u}fle}, Andreas and {Zhao}, Liang},
+       author = {Zhang, Zheng and Amiri, Hossein and Liu, Zhenke and Z{\"u}fle, Andreas and Zhao, Liang},
         title = "{Large Language Models for Spatial Trajectory Patterns Mining}",
       journal = {arXiv e-prints},
      keywords = {Computer Science - Machine Learning},
