@@ -1,8 +1,9 @@
-# amirih.github.io
+# About Me
 
-Personal academic website of **Hossein Amiri**, Ph.D. candidate in Computer Science at Emory University.
+I am **Hossein Amiri**, a Ph.D. candidate in Computer Science at **Emory University**.  
+My research focuses on **software engineering**, **high-performance computing**, **spatial data science**, and **simulation-based modeling**.  
+
+I develop reproducible and scalable software systems that integrate advanced engineering principles with data-driven scientific discovery. My work aims to enable efficient, transparent, and high-fidelity computational frameworks for large-scale simulation and analysis.  
 
 ## 🌐 Website
-**[https://amirih.github.io](https://amirih.github.io)**
-
-This site presents my research in **software engineering, high-performance computing, spatial data science, and simulation-based modeling**.  
+For additional information about my research, publications, and datasets, please visit **[amirih.github.io](https://amirih.github.io)**.
