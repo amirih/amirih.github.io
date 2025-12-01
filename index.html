@@ -4,73 +4,296 @@
   <meta charset="UTF-8">
   <title>Hossein Amiri</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --bg-alt: #ffffff;
+      --text: #111111;
+      --muted: #555555;
+      --accent: #0f766e;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
-      padding: 40px 16px;
+      padding: 0 16px 40px;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
     }
+
+    header {
+      padding-top: 32px;
+      padding-bottom: 12px;
+    }
+
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.2rem;
+      font-size: 2.3rem;
+      margin: 0 0 0.25rem;
     }
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.3rem;
-    }
+
     .subtitle {
-      color: #555;
-      margin-bottom: 1.2rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      font-size: 0.98rem;
     }
+
+    .tags {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(250, 250, 250, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      margin: 12px -16px 20px;
+      padding: 6px 16px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav a {
+      margin-right: 16px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--muted);
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    h2 {
+      margin-top: 1.8rem;
+      font-size: 1.3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+    }
+
     a {
+      color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     .section {
       margin-top: 1.2rem;
     }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 720px) {
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      nav {
+        position: static;
+      }
+    }
+
     ul {
       padding-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    .card-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+
+    .doc-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .pub-venue {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.2rem;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
     }
   </style>
 </head>
 <body>
-  <h1>Hossein Amiri</h1>
-  <div class="subtitle">
-    Ph.D. Candidate, Computer Science, Emory University<br>
-    Parallel Programming · Software Engineering · Databases · Human Mobility · Public Health
-  </div>
 
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      I design and build scalable, reproducible software systems, datasets, and simulations
-      for human mobility, epidemiology, and spatial computing.
-    </p>
-  </div>
+  <header>
+    <h1>Hossein Amiri</h1>
+    <div class="subtitle">
+      PhD Candidate, Computer Science and Informatics, Emory University<br>
+      High Performance Computing · Software Engineering · Databases · Spatial Computing · Public Health
+    </div>
+    <div class="tags">
+      <span class="pill">High Performance Software Systems</span>
+      <span class="pill">Human Mobility Modeling</span>
+      <span class="pill">Spatial Data and Simulation</span>
+      <span class="pill">Public Health Applications</span>
+    </div>
+  </header>
 
-  <div class="section">
-    <h2>Research Highlights</h2>
-    <ul>
-      <li>Patterns of Life simulation frameworks for large scale mobility and epidemiological modeling.</li>
-      <li>Global POI and trajectory datasets for urban computing and geospatial analysis.</li>
-      <li>High performance, data centric pipelines for reproducible computational research.</li>
-    </ul>
-  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <div class="section">
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://scholar.google.com/citations?user=dy14xQMAAAAJ" target="_blank">Google Scholar</a></li>
-      <li><a href="https://github.com/amirih" target="_blank">GitHub</a></li>
-      <li><a href="mailto:your.email@emory.edu">Email</a></li>
-    </ul>
-  </div>
+  <main>
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="grid-2">
+        <div>
+          <p>
+            I am a PhD candidate in Computer Science and Informatics at Emory University advised by
+            <a href="https://www.cs.emory.edu/people/faculty/zuefle/" target="_blank" rel="noopener">Prof. Andreas Züfle</a>.
+            My research focuses on high performance software systems for large scale spatial data, human mobility
+            modeling, and data driven public health applications.
+          </p>
+          <p>
+            I design and build scalable, hardware aware software, simulation frameworks, and datasets that remove
+            computational bottlenecks from modern scientific workflows. My work combines systems, parallel processing,
+            spatial computing, and epidemiology to enable larger experiments, faster iteration, and more reliable insights.
+          </p>
+        </div>
+        <div>
+          <h3>Research Interests</h3>
+          <ul class="card-list">
+            <li>High performance and parallel computing</li>
+            <li>Software engineering for scientific computing</li>
+            <li>Spatial data systems and trajectory analytics</li>
+            <li>Location based services and mobility modeling</li>
+            <li>Data driven public health and epidemiological modeling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <h2>Research</h2>
+      <p>
+        My research aims to make large scale data processing and simulation practical for researchers working with
+        mobility, spatial, and epidemiological data. I focus on efficient system design, parallelism, and careful software
+        engineering so that complex scientific workflows can be executed reliably at scale.
+      </p>
+
+      <h3>Current Themes</h3>
+      <ul>
+        <li>High performance software systems for human mobility data generation and analysis</li>
+        <li>Scalable simulation frameworks for epidemiology and public health decision support</li>
+        <li>Global point of interest and trajectory datasets for urban and spatial analytics</li>
+        <li>Compiler and SIMD based optimization for performance critical kernels</li>
+        <li>LLM assisted methods for spatial trajectory pattern mining and anomaly detection</li>
+      </ul>
+    <section id="teaching" class="section">
+      <h2>Teaching</h2>
+      <p>
+        My teaching philosophy centers on accessibility, structured learning, and active engagement. I design courses
+        that balance conceptual foundations with hands on systems work, using a mix of lectures, labs, projects, and
+        gamified elements to support different learning styles.
+      </p>
+      <p>
+        I emphasize clear structure, multiple assessment pathways, and modern tooling such as autograders and
+        learning platforms so that students can focus on understanding systems concepts and building confidence in
+        their ability to solve open ended problems.
+      </p>
+
+      <div class="grid-2">
+        <div>
+          <h3>Teaching Experience</h3>
+          <ul class="card-list">
+            <li>
+              TATTO Fellow, Laney Graduate School, Emory University: pedagogical training and mentorship for new
+              TAs and instructors across disciplines.
+            </li>
+            <li>
+              Teaching Assistant, Emory University (9 assignments) for:
+              CS 170/171 Introduction to Computer Science, CS 253 Data Structures and Algorithms,
+              CS 377 Database Systems, CS 485/584 Spatial Computing.
+            </li>
+            <li>
+              Teaching Assistant and co instructor in Parallel Processing at University of Guilan and private tutoring in
+              software engineering and programming.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Teaching Interests</h3>
+          <ul class="card-list">
+            <li>Introduction to Computer Science and Data Structures</li>
+            <li>Software Engineering and Project Based Courses</li>
+            <li>Operating Systems and Computer Architecture</li>
+            <li>Database Systems and Systems Programming</li>
+            <li>High Performance Computing and Parallel Programming</li>
+            <li>Distributed Systems, Storage Systems, and Web Systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:hossein.amiri@emory.edu">hossein.amiri@emory.edu</a></li>
+        <li>Google Scholar: <a href="https://scholar.google.com/citations?user=dy14xQMAAAAJ" target="_blank" rel="noopener">Hossein Amiri</a></li>
+        <li>GitHub: <a href="https://github.com/amirih" target="_blank" rel="noopener">@amirih</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Updated: November 2025
+  </footer>
+
 </body>
 </html>
